@@ -854,8 +854,8 @@ const applyDesktopUiPreferences = (settings: DesktopSettings) => {
   if (typeof settings.promptNavigatorEnabled === 'boolean' && settings.promptNavigatorEnabled !== store.promptNavigatorEnabled) {
     store.setPromptNavigatorEnabled(settings.promptNavigatorEnabled);
   }
-  if (
-    settings.recentSessionCyclingEnabled !== undefined
+  if (typeof settings.recentSessionCyclingEnabled === 'boolean'
+    && settings.recentSessionCyclingEnabled !== undefined
     && settings.recentSessionCyclingEnabled !== store.recentSessionCyclingEnabled
   ) {
     store.setRecentSessionCyclingEnabled(settings.recentSessionCyclingEnabled);
